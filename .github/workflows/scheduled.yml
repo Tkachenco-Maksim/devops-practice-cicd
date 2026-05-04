@@ -2,14 +2,13 @@ name: Weekly Night Scan
 
 on:
   schedule:
-    # Твой cron: 22:30 в воскресенье (Вариант C3R)
     - cron: '30 22 * * 0'
-  workflow_dispatch: # Чтобы мы могли запустить его вручную для отчета
+  workflow_dispatch:
 
 jobs:
   scan:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Run security scan simulation
-        run: echo "Scanning project at night... Variant C3R active."
+      - name: Run scan
+        run: echo "Variant C3R scan running..."
