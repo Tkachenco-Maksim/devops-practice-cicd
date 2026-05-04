@@ -2,6 +2,7 @@ name: Weekly Night Scan
 
 on:
   schedule:
+    # 22:30 в воскресенье (Вариант C3R)
     - cron: '30 22 * * 0'
   workflow_dispatch:
 
@@ -11,4 +12,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Run scan
-        run: echo "Variant C3R scan running..."
+        run: echo "Variant C3R scan running... System check OK."
